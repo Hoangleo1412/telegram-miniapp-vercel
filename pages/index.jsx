@@ -3,14 +3,9 @@
 
 import { useEffect, useState } from 'react';
 
-declare global {
-  interface Window {
-    Telegram: any;
-  }
-}
 
 export default function Home() {
-  const [chatId, setChatId] = useState<string>('');
+const [chatId, setChatId] = useState('');
   const [model, setModel] = useState<string>('gpt');
   const [style, setStyle] = useState<string>('default');
   const [instructions, setInstructions] = useState<string>('');
